@@ -25,6 +25,7 @@ h2 {
 
 .tobo-list {
     margin-top: 50px;
+    text-align: center;
 }
 
 .tobo-list li {
@@ -39,6 +40,22 @@ h2 {
 
 .paragraph {
     text-decoration: line-through;
+}
+
+.input {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.text {
+    padding: 5px 0;
+}
+
+.btn {
+    padding: 5px;
+    color: white;
+    background-color: blue;
+    cursor: pointer;
 }
 
 .cross {

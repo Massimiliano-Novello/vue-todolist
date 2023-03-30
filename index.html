@@ -17,17 +17,20 @@
         <main>
             <div class="container">
                 <h2>Cose da fare</h2>
-                <ul class="tobo-list">
-                    <li v-for="(item, index) in todos">
+                <ul class="tobo-list"  v-if="todos.length > 0">
+                    <li v-for="(item, index) in todos" @click="removeTodo(index)">
                         <p :class="{'paragraph' : item.done === true}">{{ item.text }}</p>
                     </li>
+                    
                 </ul>
+                <div v-else>
+                    <h3>Non hai niente da fare</h3>
+                </div>
 
-                <div>
+                <div class="input">
                     <label for="newTodo"></label>
-                    <input type="text" id="newTodo" placeholder="aggiungi" v-model="newTodos.text">
-                    <button @click="newElem">Aggiungi</button>
-                    <p class="error" v-show="error">Inserisci un nuovo todo</p>
+                    <input type="text" id="newTodo" placeholder="Aggiungi" v-model="newTodos" class="text">
+                    <button class="btn" @click="newElem">Aggiungi</button>
                 </div>
             </div>
         </main>
