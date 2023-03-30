@@ -20,15 +20,14 @@
                 <ul class="tobo-list">
                     <li v-for="(item, index) in todos">
                         <p :class="{'paragraph' : item.done === true}">{{ item.text }}</p>
-                        <span class="cross">&cross;</span>
                     </li>
                 </ul>
 
                 <div>
                     <label for="newTodo"></label>
-                    <input type="text" id="newTodo" placeholder="aggiungi" v-model="newTodos">
-
+                    <input type="text" id="newTodo" placeholder="aggiungi" v-model="newTodos.text">
                     <button @click="newElem">Aggiungi</button>
+                    <p class="error" v-show="error">Inserisci un nuovo todo</p>
                 </div>
             </div>
         </main>

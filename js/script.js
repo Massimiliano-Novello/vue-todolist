@@ -3,7 +3,11 @@ const {createApp} = Vue;
 createApp ({
     data () {
         return {
-            newTodos: "",
+            newTodos:
+            {
+                text: "",
+                done: false
+            },
             todos: [
                 {
                     text: "Fare la spesa",
@@ -21,15 +25,12 @@ createApp ({
                     text: "Andare ad allenarsi",
                     done: false
                 }
-            ]
+            ],
         }
     },
     methods: {
         newElem() {
-            this.todos.push({
-                text: "",
-                done: false
-            });
+            this.todos.push({...this.newTodos});
             this.newTodos = "";
         }
     }
