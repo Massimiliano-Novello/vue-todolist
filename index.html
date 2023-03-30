@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tobo list</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>TOBO LIST</h1>
+        </header>
+        <main>
+            <div class="container">
+                <h2>Cose da fare</h2>
+                <ul class="tobo-list">
+                    <li v-for="(item, index) in todos">
+                        <p :class="{'paragraph' : item.done === true}">{{ item.text }}</p>
+                        <span class="cross">&cross;</span>
+                    </li>
+                </ul>
+
+                <div>
+                    <label for="newTodo"></label>
+                    <input type="text" id="newTodo" placeholder="aggiungi" v-model="newTodos">
+
+                    <button @click="newElem">Aggiungi</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+
+    <script src="js/script.js"></script>
+</body>
+</html>

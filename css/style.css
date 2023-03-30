@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 3rem;
+    border-bottom: 2px solid black;
+}
+
+/* MAIN */
+.container {
+    width: 30%;
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 30px;
+}
+
+.tobo-list {
+    margin-top: 50px;
+}
+
+.tobo-list li {
+    list-style-type: none;
+    margin: 30px 0;
+    border-bottom: 1px solid black;
+    padding: 10px 0;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.paragraph {
+    text-decoration: line-through;
+}
+
+.cross {
+    color: red;
+}
